@@ -50,3 +50,42 @@ select * from autores;
 select * from libros;
 select * from usuarios;
 select * from prestamos;
+
+-- INSERTAR 
+INSERT INTO autores (nombre, apellidos, fecha_nacimiento) VALUES 
+('author1', 'apellido1', '1980-01-01'),
+('author2', 'apellido2', '1981-01-01'),
+('author3', 'apellido3', '1982-01-01'),
+('author4', 'apellido4', '1983-01-01'),
+('author5', 'apellido5', '1984-01-01'),
+('author6', 'apellido6', '1985-01-01')
+;
+
+INSERT INTO libros (titulo, editorial, category, num_paginas, precio, id_autor) VALUES
+('Ejemplo libro antiguo', 'Planeta', 'Novela', 250, 19.99, 1),
+('Ejemplo libro moderno', 'Anaya', 'Tecnico', 500, 39.99, 1),
+('Ensayos varios', 'Planeta', 'Ensayo', 432, 9.99, 2),
+('Poemas', 'Planeta', 'Novela', 250, 19.99, 3),
+('Periodico semanal', 'Planeta', 'Novela', 250, 19.99, 3),
+('Ejemplo libro antiguo', 'Planeta', 'Novela', 250, 19.99, 3)
+;
+
+INSERT INTO usuarios (nif, email, fecha_alta, codigo_postal) VALUES
+('1111111A', 'user1@gmail.com', '2015-01-01', '28003'),
+('2222222B', 'user2@gmail.com', '2016-01-01', '28002'),
+('3333333C', 'user3@gmail.com', '2015-02-01', '44500'),
+('4444444D', 'user4@gmail.com', '2015-03-01', '24001'),
+('5555555E', 'user5@gmail.com', '2015-04-01', '33020')
+;
+-- sin recargo
+INSERT INTO prestamos (id_libro, id_usuario, fecha_inicio, fecha_fin) VALUES 
+(1, 2, '2023-04-10', '2023-04-18')
+;
+-- con recargo
+INSERT INTO prestamos (id_libro, id_usuario, fecha_inicio, fecha_fin, recargo) VALUES 
+(1, 2, '2023-04-10', '2023-04-18', 0.0),
+(2, 3, '2023-04-10', '2023-04-18', 2.34),
+(3, 4, '2023-04-11', '2023-04-19', 0.0),
+(2, 5, '2023-04-14', '2023-04-23', 3.0)
+;
+

@@ -89,3 +89,61 @@ INSERT INTO prestamos (id_libro, id_usuario, fecha_inicio, fecha_fin, recargo) V
 (2, 5, '2023-04-14', '2023-04-23', 3.0)
 ;
 
+-- 1. Tabla autores
+-- select por nombre like
+-- select count por año de nacimiento
+SELECT EXTRACT(YEAR FROM fecha_nacimiento) as birth_year, 
+count(*) as total_authors
+from autores
+GROUP BY EXTRACT(YEAR FROM fecha_naciemiento);
+
+	
+-- 2. tabla libros
+-- select por titulo like
+-- count por editorial o por category
+SELECT count(*) from libros;
+SELECT editorial, count(*) as count_books FROM libros GROUP by editorial;
+-- sum de precio por editorial
+SELECT editorial, sum(precio) as precio_total from libros GROUP by editorial;
+SELECT editorial, round(avg(precio), 2) as precio_medio from libros GROUP by editorial;
+-- avg de precio por nombre de autor
+SELECT * 
+FROM libros 
+JOIN autores ON libros.id_autor = autores.id_autor
+
+SELECT autores.nombre, round(avg(precio), 2), sum(precio), round(avg(num_paginas),0), sum(num_paginas)
+FROM libros 
+JOIN autores ON libros.id_autor = autores.id_autor GROUP by autores.nombre;
+
+-- max o avg por num_paginas
+
+-- qué autor tiene más libros: max count por autor
+SELECT autores.nombre as nombre_autor, count(*) as count_libros
+from libros
+JOIN autores on libros.id_autor = autores.id_autor GROUP by autores.nombre;
+
+SELECT nombre_autor, max(count_libros) from
+(
+SELECT autores.nombre as nombre_autor, count(*) as count_libros
+from libros
+JOIN autores on libros.id_autor = autores.id_autor GROUP by autores.nombre
+)
+as result;
+
+-- qué autor tiene más libros: min count por autor
+
+-- 3. tabla usuarios
+-- count de altas por mes
+-- count por código postal
+
+-- 4. tabla prestamos
+-- count por mes
+-- sum recargo
+SELECT sum(recargo) from prestamos;
+SELECT id_usuario, sum(recargo) as Recargo_Euros from prestamos GROUP by id_usuario;
+SELECT id_usuario, sum(recargo) as Recargo_Euros from prestamos GROUP by id_usuario HAVING Recargo_Euros > 0;
+
+-- max sum recargos group by user
+-- avg (count por usuario) group by year
+-- count por autor
+-- max count libro

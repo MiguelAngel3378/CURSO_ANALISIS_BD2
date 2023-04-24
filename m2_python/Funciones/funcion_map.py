@@ -8,7 +8,6 @@ results = list(map(prices_iva,prices))
 print(results)
 
 
-
 prices = [10,20,30,40,50] 
 prices_iva = []
 for price in prices:

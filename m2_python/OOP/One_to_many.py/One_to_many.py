@@ -16,6 +16,6 @@ book2 = Book('book200', 450)
 
 author1 = Autor('author1', 2005)
 
-books = []
+author1.books = author1.books + [book1, book2]
 
-print('fin')
+print("fin'")

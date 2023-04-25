@@ -1,5 +1,5 @@
 class Author:
-    def __init__(self, id, nif, email, year, city, num_books=0):
+    def __init__(self, id, nif, email, year, city, num_books):
         self.id = id
         self.nif = nif
         self.email = email
@@ -15,5 +15,5 @@ class Author:
         f"city = {self.city} " \
         f"num_books = {self.num_books}"
     
-author1 = Author(1, '2322323R', 'author1@email.com', 2000, 'Madrid')
+author1 = Author(1, '2322323R', 'author1@email.com', 2000, 'Madrid', 10)
 print(author1)

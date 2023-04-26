@@ -17,5 +17,7 @@ class Jobffer:
     
 offer1 = Jobffer('Analista_datos', 'Adecco', 20000, 'Hibrido', 1)
 offer2 = Jobffer('Database_controler', 'IBM', 25000, 'Presencial', 2)
+offer3 = Jobffer('Manager_Matplotlib', 'Howlden', 30000, 'Online', 4 )
 print(offer1)
 print(offer2)
+print(offer3)

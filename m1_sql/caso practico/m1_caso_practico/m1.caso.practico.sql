@@ -69,4 +69,11 @@ GROUP BY dp.id_pedido;
 SELECT COUNT(*) FROM pedidos;
 SELECT COUNT(*) FROM productos;
 
+SELECT dp.id_detalle_pedido, SUM(cantidad) AS cantidad_productos_dif
+FROM detalles_pedidos AS dp
+JOIN pedidos ON id_pedido = id_pedido
+JOIN productos ON p.id_producto = q.id_producto
+GROUP BY id_pedido, descripcion_producto ORDER BY cantidad DESC LIMIT 1;
+
+
 

@@ -9,10 +9,12 @@
 
 # fecha_nacimiento = input("Introduce fecha de nacimiento (YYYY-MM-dd) (1990-07-20) \n")
 
-fecha_nacimiento_str = input("Introduce fecha de nacimiento (dd-MM-YYYY) (03/11/1993) \n")
+fecha_nacimiento_str = input("Introduce fecha de nacimiento (dd/MM/YYYY) (03/11/1993) \n")
+    
 year
 month
 day
+
 datetime.date[1993, 1, 28]
 
 

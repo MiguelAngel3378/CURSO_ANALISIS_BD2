@@ -42,7 +42,11 @@ class Traveldatabase:
         # gusrdar en la lista
         self.travels.append(travel)
     
-    def update(self):
+    def update(self, travel):
+        # encontrar el travel a actualizar
+        travel.id = 
+        
+        # asignarle el travel encontrado los valores del travel parametro
     
     def delete(self):
         

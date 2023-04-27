@@ -29,7 +29,8 @@ class Traveldatabase:
                 
         return filtered_travels
         
-    def insert(self):
+    def save(self, travel):
+        self.travels.append(travel)
     
     def update(self):
     

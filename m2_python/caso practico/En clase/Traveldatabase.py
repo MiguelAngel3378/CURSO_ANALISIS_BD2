@@ -30,6 +30,14 @@ class Traveldatabase:
         return filtered_travels
         
     def save(self, travel):
+        # buscar en travels cual es el id mas alto
+        for current_travel in self.travels:
+            if current_travel.id > 0
+        
+        # generar el nuevo id sumando 1 al id mas alto  
+        travel.id =
+        
+        # gusrdar en la lista
         self.travels.append(travel)
     
     def update(self):

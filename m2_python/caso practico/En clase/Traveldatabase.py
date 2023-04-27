@@ -51,11 +51,15 @@ class Traveldatabase:
                 current_travel.city_to = travel.city.to
                 current_travel.passengers = travel.passengers
                 current_travel.price = travel.price
-                break
+                return True
+            
+        return False
         
         # asignarle el travel encontrado los valores del travel parametro
     
-    def delete(self):
+    def delete_by_id(self):
+        for travel in self.travels:
+            if travel.id == id:
         
     
     

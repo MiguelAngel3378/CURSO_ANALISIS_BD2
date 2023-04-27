@@ -37,6 +37,7 @@ class Traveldatabase:
                 id_maximo = current_travel.id
         
         # generar el nuevo id sumando 1 al id mas alto  
+    
         travel.id = id_maximo + 1
         
         # gusrdar en la lista
@@ -44,7 +45,13 @@ class Traveldatabase:
     
     def update(self, travel):
         # encontrar el travel a actualizar
-        travel.id = 
+        for current_travel in self.travels:
+            if current_travel.id == travel.id:
+                current_travel.city_from = travel.city_from
+                current_travel.city_to = travel.city.to
+                current_travel.passengers = travel.passengers
+                current_travel.price = travel.price
+                break
         
         # asignarle el travel encontrado los valores del travel parametro
     

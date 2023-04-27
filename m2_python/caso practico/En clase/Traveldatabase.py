@@ -57,9 +57,10 @@ class Traveldatabase:
         
         # asignarle el travel encontrado los valores del travel parametro
     
-    def delete_by_id(self):
+    def delete_by_id(self, id):
         for travel in self.travels:
             if travel.id == id:
+                self.travels.remove
                 
         
     

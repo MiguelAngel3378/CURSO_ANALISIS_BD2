@@ -31,11 +31,13 @@ class Traveldatabase:
         
     def save(self, travel):
         # buscar en travels cual es el id mas alto
+        id_maximo = 0
         for current_travel in self.travels:
-            if current_travel.id > 0
+            if current_travel.id > id_maximo:
+                id_maximo = current_travel.id
         
         # generar el nuevo id sumando 1 al id mas alto  
-        travel.id =
+        travel.id = id_maximo + 1
         
         # gusrdar en la lista
         self.travels.append(travel)

@@ -5,7 +5,7 @@
 
 1. Travel.py:
 clase travel 
-    id, city_from, city_to
+    id, city_from, city_to, passengers, price
     
 2. Traveldatabase.py:
 clase traveldatabase

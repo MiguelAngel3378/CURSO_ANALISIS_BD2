@@ -62,6 +62,48 @@ class Traveldatabase:
             if travel.id == id:
                 self.travels.remove
                 
+        # DELETE FROM travels WHERE id = 1
+    def delete_by_id(self, id):
+        for travel in self.travels:
+            if travel.id == id:
+                self.travels.remove(travel)
+                break
+                
+    def delete_all(self): 
+        self.travels = []
+                
+        # Crear 1 objeto TravelDatabase
+    from travel_database import Traveldatabase
+    travel_database = Traveldatabase()
+    
+        # Crear 5 objetos Travel utilizando el constructor
+    from Travel import Travel 
+    travel1 = Travel(city_from=  'Madrid', city_to='Barcelona', price=123.11, passengers=2)
+    travel2 = Travel(city_from=  'Asturias', city_to='Malaga', price=223.11, passengers=3)  
+        
+        # Insertar los objetos Travel en TravelDatabase utilizando base()
+    travel_database.save(travel1)
+    
+        # Ejempko de como capturar un error
+    travels = travel_database.find_all_by_city
+        
+        # Probar metodos find
+        
+    travels = travel_database.find_all()
+    print(f"Longitud {len(travels)}")
+    print(f"Viaje 1 {travels[0]}")
+    print(f"Viaje 2 {travels[1]}")
+    
+    travel2 = travel_database.find_by_id(2)
+    print(f"Viaje 2: {travel2}")
+    
+    travel9 = travel_database.find_by_id(9)
+    print(f"Viaje 9: {travel9}")
+        # Probar metodo update
+        
+        
+        # Probar delete & deleteall
+        
         
     
     

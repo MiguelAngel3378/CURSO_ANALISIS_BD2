@@ -16,6 +16,8 @@ clase TravelDatabase
 3. app.py:
     pruebe todas las operaciones de TravelDatabase
     leer de input los datos para crear objetos Travel
+    
+    
 Para entregar: Base de datos de incendios
 1. fire.py
 class Fire
@@ -51,12 +53,17 @@ travel_database = TravelDatabase()
 
 # Crear 5 objetos Travel utilizando el constructor
 from travel import Travel
-travel1 = Travel(id=None, city_from='Madrid', city_to="Barcelona", price=123.21, passengers=2)
+travel1 = Travel(id=None, city_from='Madrid', city_to="Barcelona", price=123.21, passengers=1)
 travel2 = Travel(id=None, city_from='Asturias', city_to="Malaga", price=223.21, passengers=2)
+travel3 = Travel(id=None, city_from='Barcelona', city_to="Zaragoza", price=335.21, passengers=3)
+travel4 = Travel(id=None, city_from='Zaragoza', city_to="Madrid", price=245.21, passengers=4)
+travel5 = Travel(id=None, city_from='Madrid', city_to="Toledo", price=125.21, passengers=5)
 
 # Insertar los objetos Travel en TravelDatabase utilizando save()
 travel_database.save(travel1)
 travel_database.save(travel2)
+travel_database.save(travel3)
+travel_database.save(travel4)
 
 # Probar métodos find
 # print("====================== FIND ALL ===================")

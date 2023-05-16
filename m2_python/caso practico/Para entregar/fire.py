@@ -11,3 +11,14 @@ class Fire:
         self.dato_to = date_to
         self.active = active
         self.cause = cause
+        
+     def __str__(self):
+     return f"{self.id} {self.province} {self.street} {self.fire_level}{self.date_from} {self.date_to} {self.active} {self.cause}"
+        
+primer_incendio = Fire("uno", "Madrid", "Calle Camino de Santiago 15", "low", "02/10/2010", "02/20/2010", "no", "cigarrette")
+print(type(primer_incendio))
+
+print(primer_incendio.cause)
+print(primer_incendio.fire_level)  
+print(primer_incendio.street)  
+print(primer_incendio.id)  

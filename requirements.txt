@@ -1,0 +1,5 @@
+pip
+jypiter
+numpy
+pandas
+matplotlib

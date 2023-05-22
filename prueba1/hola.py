@@ -5,3 +5,5 @@ def saludo(firt_name, last_name):
 saludo('Riberto', 'Carlos')
 saludo('Ruben', 'Romero')
 saludo('Ricardo', 'Aguaero')
+saludo('Mauricio', 'Locatelli')
+saludo('Alberto', 'Zamora')

@@ -1,5 +1,5 @@
 
-def saludo(): 
-    print("hello world")
+def saludo(firt_name, last_name): 
+    print(f'hello {first_name} {last_name}')
 
-saludo()
+saludo('Riberto', 'Carlos')

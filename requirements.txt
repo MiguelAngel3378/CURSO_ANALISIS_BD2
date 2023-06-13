@@ -11,5 +11,5 @@ sqlalchemy
 ydata-profiling
 fastcluster
 folium
-
+plotly
 

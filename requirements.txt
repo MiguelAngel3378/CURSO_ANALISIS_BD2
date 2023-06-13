@@ -12,4 +12,4 @@ ydata-profiling
 fastcluster
 folium
 plotly
-scikit.learn
+scikit-learn
